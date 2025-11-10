@@ -79,80 +79,90 @@
       letter-spacing: 0.5px;
     }
 
+    /* VISITING CARD SECTION (moved to top) */
+    .visiting-card {
+      position: relative;
+      z-index: 1;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .visiting-card h3 {
+      color: #a66b2d;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .visiting-card img {
+      width: 400px;
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(166, 107, 45, 0.3);
+      border: 3px solid #f2e3d1;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .visiting-card img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(166, 107, 45, 0.45);
+    }
+
     /* ABOUT SECTION */
-    /* ABOUT SECTION */
-/* ABOUT SECTION */
-.about {
-  position: relative;
-  width: 100%;
-  background: url('img/bg-finance3.jpg') no-repeat center center/cover;
-  background-attachment: fixed;
-  padding: 100px 10%;
-  color: #222;
-  text-align: left;
-  animation: fadeInUp 1.2s ease;
-  overflow: hidden;
-}
+    .about {
+      position: relative;
+      width: 100%;
+      background: url('img/bg-finance3.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      padding: 100px 10%;
+      color: #333;
+      text-align: center;
+      overflow: hidden;
+      animation: fadeInUp 1.2s ease;
+    }
 
-/* Adjusted overlay for visibility */
-/* ABOUT SECTION */
-.about {
-  position: relative;
-  width: 100%;
-  background: url('img/bg-finance3.jpg') no-repeat center center/cover;
-  background-attachment: fixed;
-  padding: 100px 10%;
-  color: #333;
-  text-align: center;
-  overflow: hidden;
-}
+    .about::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      z-index: 0;
+    }
 
-.about::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
-  z-index: 0;
-}
+    .about h2 {
+      position: relative;
+      z-index: 1;
+      color: #a66b2d;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-.about h2 {
-  position: relative;
-  z-index: 1;
-  color: #a66b2d;
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-  margin-bottom: 40px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    .about-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      text-align: left;
+      line-height: 1.9;
+      font-size: 1.05em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Card-style box (same as Contact Us) */
-.about-content {
-  position: relative;
-  z-index: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 50px 40px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  text-align: left;
-  line-height: 1.9;
-  font-size: 1.05em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .about-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(166, 107, 45, 0.25);
+    }
 
-.about-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(166, 107, 45, 0.25);
-}
-
-.about-content strong {
-  color: #b47b3f;
-}
-
-
-
+    .about-content strong {
+      color: #b47b3f;
+    }
 
     /* SERVICES */
     .services-section {
@@ -207,7 +217,7 @@
       color: #555;
     }
 
-    /* CONTACT SECTION (Local Image) */
+    /* CONTACT SECTION */
     .contact {
       position: relative;
       background: url('img/bg-finance5.jpg') no-repeat center center/cover;
@@ -355,6 +365,10 @@
       .contact-info {
         padding: 25px;
       }
+
+      .visiting-card img {
+        width: 300px;
+      }
     }
   </style>
 </head>
@@ -371,6 +385,12 @@
       </div>
     </div>
   </header>
+
+  <!-- VISITING CARD (Moved to Top) -->
+  <section class="visiting-card">
+    <h3>Middle Man Business Card</h3>
+    <img src="img/visiting-card.jpg" alt="Middle Man Visiting Card">
+  </section>
 
   <!-- ABOUT -->
   <section class="about">
@@ -431,7 +451,7 @@
     <div class="contact-info">
       <p><i class="fa-solid fa-user-tie"></i><strong>Sole Proprietor:</strong> Dharanikumar Manivannan</p>
       <p><i class="fa-solid fa-briefcase"></i><strong>Designation:</strong> Financial Advisor</p>
-      <p><i class="fa-solid fa-phone"></i><strong>Mobile:</strong> <a href="tel:9344501443">+91 9344501443</a></p>
+      <p><i class="fa-solid fa-phone"></i><strong>Mobile:</strong> <a href="tel:9363920208">+91 9363920208</a></p>
       <p><i class="fa-solid fa-envelope"></i><strong>Email:</strong> <a href="mailto:Middlemanadvisor@gmail.com">Middlemanadvisor@gmail.com</a></p>
     </div>
   </section>
@@ -447,7 +467,7 @@
   </a>
 
   <script>
-    const phoneNumber = "919344501443";
+    const phoneNumber = "919363920208";
     const message = encodeURIComponent("Hello Dharanikumar!\n\nI would like to know more about your financial services.");
     const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
 
