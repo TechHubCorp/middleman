@@ -79,35 +79,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* VISITING CARD SECTION (moved to top) */
-    .visiting-card {
-      position: relative;
-      z-index: 1;
-      margin-top: 50px;
-      text-align: center;
-    }
-
-    .visiting-card h3 {
-      color: #a66b2d;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-
-    .visiting-card img {
-      width: 400px;
-      max-width: 90%;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(166, 107, 45, 0.3);
-      border: 3px solid #f2e3d1;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .visiting-card img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 35px rgba(166, 107, 45, 0.45);
-    }
-
     /* ABOUT SECTION */
     .about {
       position: relative;
@@ -291,6 +262,36 @@
       color: #7b4f1b;
     }
 
+    /* ADDRESS BOX */
+    .address-box {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(166, 107, 45, 0.4);
+      border-radius: 15px;
+      padding: 20px 25px;
+      box-shadow: 0 4px 15px rgba(166, 107, 45, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .address-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(166, 107, 45, 0.25);
+    }
+
+    .address-box h4 {
+      color: #a66b2d;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .address-box p {
+      margin-left: 25px;
+      line-height: 1.6;
+      color: #444;
+      font-size: 1.05em;
+    }
+
     /* FOOTER */
     footer {
       margin-top: 70px;
@@ -366,8 +367,8 @@
         padding: 25px;
       }
 
-      .visiting-card img {
-        width: 300px;
+      .address-box {
+        padding: 15px 20px;
       }
     }
   </style>
@@ -385,12 +386,6 @@
       </div>
     </div>
   </header>
-
-  <!-- VISITING CARD (Moved to Top) -->
-  <section class="visiting-card">
-    <h3>Middle Man Business Card</h3>
-    <img src="img/visiting-card.jpg" alt="Middle Man Visiting Card">
-  </section>
 
   <!-- ABOUT -->
   <section class="about">
@@ -453,6 +448,14 @@
       <p><i class="fa-solid fa-briefcase"></i><strong>Designation:</strong> Financial Advisor</p>
       <p><i class="fa-solid fa-phone"></i><strong>Mobile:</strong> <a href="tel:9363920208">+91 9363920208</a></p>
       <p><i class="fa-solid fa-envelope"></i><strong>Email:</strong> <a href="mailto:Middlemanadvisor@gmail.com">Middlemanadvisor@gmail.com</a></p>
+
+      <div class="address-box">
+        <h4><i class="fa-solid fa-location-dot"></i> Office Address</h4>
+        <p>No. 35, Krishna Apartment<br>
+        United India Colony<br>
+        Kodambakkam<br>
+        Chennai - 600024</p>
+      </div>
     </div>
   </section>
 
